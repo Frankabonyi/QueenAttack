@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size:18px;
+    height: 100vh;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+}
+
+.board {
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgb(248, 208, 187);
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows:  repeat(8, 1fr); 
+}
+
+.wrapper{
+    margin: auto;
+    background-color:  rgb(68, 26, 3);
+    border: 10px solid rgb(68, 26, 3);
+    border-radius: 40px;
+  }
+
+.cell {
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.white {
+    background-color: rgb(238, 229, 233);
+}
+
+.checked{
+    background: rgb(1, 129, 1)
+}
+
+.cell:hover {
+    color: #ffffff;
+    background: rgb(125, 161, 125);
+}
+
+.result{
+    margin: 1px auto;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    height: 15%;
+    width: 350px;
+    padding: 20px;
+    background-color: rgb(167, 76, 76);
+    color:#fff;
+    text-align: center;
+  }
+
+.btn-attack {
+    margin: 2px auto;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    background-color: rgb(167, 76, 76);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgb(116, 87, 72), 0 3px 3px rgba(0,0,0,3.23);
+} 
+
+button:hover{
+    background-color: rgb(197, 40, 40);
+}
+
+@media only screen and (max-width: 480px){
+    .btn-attack{
+      width: 50%;
+      color: #fff;
+      background-color: rgb(167, 76, 76)
+    }
+    .wrapper{
+      margin: aut;
+      width: 90%;
+    }
+    .board{
+      width: 88%;
+    }
+    .result{
+      width: 80%;
+      font-size: 10px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
