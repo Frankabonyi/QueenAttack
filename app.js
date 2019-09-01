@@ -1,5 +1,6 @@
 let row1, col1, row2, col2, count = 1, numChecked=0;
 const board = document.querySelector('.board');
+const button = document.querySelector('.btn-attack');
 
 board.addEventListener('click', (e)=> {
     if(e.target.classList.contains('white')){
@@ -8,8 +9,7 @@ board.addEventListener('click', (e)=> {
         e.target.classList.toggle("checked")
     }
 })
-
-document.querySelector('.btn-attack').addEventListener('click', ()=>{
+button.addEventListener('click', ()=>{
     cells = board.getElementsByTagName('*')
     let i,cell
     for(i=0; i<cells.length; ++i){
@@ -44,7 +44,7 @@ checkMatch = (fr,fc,sr,sc)=>{
     row1=parseInt(row1); col1=parseInt(col1); row2=parseInt(row2); col2=parseInt(col2);
 
         if(row1 === row2 || col1 === col2 || (Math.abs(row1+col1) ===  Math.abs(row2+col2)) || (Math.abs(row1-col1) === Math.abs(row2-col2)) ){
-            document.querySelector('.result').textContent = 'Queen Can Attack';
+            document.querySelector('.result').textContent = ' Great! Queen Can Attack';
             clearQueen();
         }
         else{
